@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://kit.fontawesome.com/c7dd10cd7c.js" crossorigin="anonymous"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -24,7 +23,7 @@
                 function ({ addBase }) {
                     addBase(
                         {
-                            'h2': { color: '#212121', fontSize: '2rem', fontWeight: 700 },
+                            'h2': { color: '#212121', fontWeight: 700 },
                             'p': { color: '#494949', fontSize: '1rem', fontWeight: 500, lineHeight: "1.625rem" }
                         }
                     )
@@ -35,15 +34,15 @@
 </head>
 
 <body style="font-family: Manrope, sans-serif">
-    <header class="w-11/12 sm:container mx-auto">
+    <header class="w-11/12 sm:container 2xl:w-8/12 mx-auto mb-28">
         <!-- Navbar -->
         <div class="flex items-center justify-between my-14">
-            <a href="index.html" class="flex items-center gap-2 text-[2rem] font-extrabold -mt-2">
+            <a href="index.html" class="flex items-center gap-2 text-[2rem] font-extrabold lg:-mt-2">
                 <span class="bg-color-primary p-2.5 rounded-full">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="size-6 rotate-90">
+                        stroke="black" class="size-6 -rotate-45">
                         <path stroke-linecap="round" stroke-linejoin="round"
-                            d="m19.5 19.5-15-15m0 0v11.25m0-11.25h11.25" />
+                            d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                     </svg>
                 </span>
                 Rinterio
@@ -66,9 +65,9 @@
                         class="flex items-center gap-2 text-xl font-extrabold bg-color-primary rounded-full px-5 py-3">Book
                         Consult <span class="bg-black p-2.5 rounded-full">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="white" class="size-6 rotate-90">
+                                stroke="white" class="size-6 -rotate-45">
                                 <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="m19.5 19.5-15-15m0 0v11.25m0-11.25h11.25" />
+                                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                             </svg>
                         </span>
                     </a>
@@ -95,16 +94,61 @@
                 View Details
                 <span class="bg-color-primary p-1.5 rounded-full">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="black" class="size-6 rotate-90">
+                        stroke="black" class="size-6 -rotate-45">
                         <path stroke-linecap="round" stroke-linejoin="round"
-                            d="m19.5 19.5-15-15m0 0v11.25m0-11.25h11.25" />
+                            d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                     </svg>
                 </span>
             </a>
         </section>
     </header>
     <main>
+        <!-- About Us -->
+        <section class="bg-[#f4f4f4] py-28">
+            <div
+                class="w-11/12 sm:container 2xl:w-8/12 mx-auto flex flex-col lg:flex-row gap-4 justify-between relative">
+                <img src="./assets/Vector.png" alt="" class="hidden lg:block absolute -top-[12%] -left-[3%]">
+                <div
+                    class="flex flex-col lg:justify-between items-center lg:items-start gap-4 text-center lg:text-left lg:w-1/2">
+                    <p class="inline-flex gap-2 font-bold px-4 py-2 bg-white rounded-[24px]">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                            </svg></span>
+                        About Us
+                    </p>
+                    <div class="space-y-4">
+                        <h2 class="text-2xl md:text-[2.5rem]">We design thoughtful, liveable spaces</h2>
+                        <p>The barn house captivates with its blend of rustic charm and
+                            modern sophistication, featuring weathered wood, sleek metal accents.</p>
+                    </div>
+                    <div class="flex gap-4 flex-col md:flex-row  lg:flex-col">
+                        <div class="bg-white rounded-[16px] flex gap-6 p-6">
+                            <img src="./assets/commercial.png" alt="">
+                            <div class="w-8/12">
+                                <h4 class="text-xl font-extrabold">Commercial</h4>
+                                <p>The barn house captivates with its blend of rustic charm and modern.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-[16px] flex gap-6 p-6">
+                            <img src="./assets/residential.png" alt="">
+                            <div class="w-8/12">
+                                <h4 class="text-xl font-extrabold">Residential</h4>
+                                <p>The barn house captivates with its blend of rustic charm and modern.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 rounded-2xl h-96 lg:h-auto">
+                    <img src="./assets/Rectangle.png" alt="" class="h-full w-full object-cover rounded-2xl">
+                </div>
+            </div>
+        </section>
+        <!-- How We Work -->
+        <section class=" w-11/12 md:w-[85%] lg:w-[70%] mx-auto bg-[#f4f4f4]">
 
+        </section>
     </main>
     <footer>
 
